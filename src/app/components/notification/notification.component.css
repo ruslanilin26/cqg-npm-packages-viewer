@@ -1,0 +1,27 @@
+.notification {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  position: fixed;
+  top: 1.25rem;
+  right: 1.25rem;
+  background-color: #c95b5b;
+  color: white;
+  padding: 0.625rem 1rem;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  font-size: 0.875rem;
+  transition:
+    transform 0.5s ease-in-out,
+    opacity 0.5s ease-in-out;
+  opacity: 1;
+}
+
+.notification .close-button {
+  cursor: pointer;
+  font-weight: bold;
+  color: #480f0f;
+  font-size: 1.25rem;
+}

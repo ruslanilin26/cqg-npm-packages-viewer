@@ -1,0 +1,58 @@
+.package-card {
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  width: 17.5rem;
+  margin: 0.5rem;
+  border: 0.125rem solid #000;
+  border-radius: 0.625rem;
+  box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.1);
+  background-color: white;
+  transition: all 0.3s;
+}
+
+.package-card:hover .title-container {
+  background-color: var(--app-selected-card--color);
+}
+
+.title-container {
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+  transition: all 0.3s;
+  border-bottom: 0.125rem solid #000;
+}
+
+.title-container p {
+  font-size: var(--app-primary-font--size);
+  margin: 0.5rem;
+  color: var(--app-primary-font--color);
+  font-weight: 500;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+}
+
+.description-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem 0.5rem;
+}
+
+.description-container p {
+  font-size: var(--app-secondary-font--size);
+  margin: 0;
+  color: var(--app-secondary-font--color);
+}
+
+.package-card.dependency-highlight .title-container {
+  background-color: var(--app-dependency--color);
+}
+
+.package-card .highlight {
+  color: var(--app-accent-font--color);
+  font-weight: 700;
+}
+
+.downloads {
+  color: var(--app-primary-font--color);
+}

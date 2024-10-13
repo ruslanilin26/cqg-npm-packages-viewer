@@ -1,0 +1,23 @@
+<div
+  class="package-card"
+  (mouseenter)="onMouseEnter()"
+  (mouseleave)="onMouseLeave()"
+  [ngClass]="{ 'dependency-highlight': isDependencyHighlighted() }"
+>
+  <div class="title-container">
+    <p>
+      @if (package.id.includes("/")) {
+        <span class="highlight">{{ packageName[0] + "/" }}</span
+        >{{ packageName[1] }}
+      } @else {
+        {{ package.id }}
+      }
+    </p>
+  </div>
+  <div class="description-container">
+    <p class="downloads">
+      {{ formatDownloads(package.weeklyDownloads) }} downloads
+    </p>
+    <p class="dependencies">{{ package.dependencyCount }} dependencies</p>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+:root {
+  --app-primary-font--color: #66666f;
+  --app-secondary-font--color: #333;
+  --app-accent-font--color: #ff8a37;
+  --app-selected-card--color: #e0f2ff;
+  --app-dependency--color: #ffdddd;
+
+  --app-primary-font--size: 1rem;
+  --app-secondary-font--size: 0.8rem;
+}
+
+html,
+body,
+app-root,
+app-packages-page {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: Montserrat, sans-serif;
+}
+
+app-packages-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}

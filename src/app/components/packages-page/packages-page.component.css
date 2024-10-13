@@ -1,0 +1,28 @@
+.package-list {
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: auto;
+  height: 50%;
+  border: 2px solid black;
+  width: 50%;
+}
+
+.search-bar-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  width: 50%;
+  margin: 0.625rem 0;
+}
+
+input {
+  font-family: inherit;
+  font-size: var(--app-primary-font--size);
+  width: 30%;
+  padding: 0.25rem;
+  border: 2px solid black;
+}
+
+button {
+  width: 15%;
+}

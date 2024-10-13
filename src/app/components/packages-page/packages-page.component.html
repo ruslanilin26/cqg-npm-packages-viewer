@@ -1,0 +1,19 @@
+<div class="search-bar-container">
+  <input type="text" [(ngModel)]="searchValue" placeholder="Search..." />
+  <button (click)="loadPackages()">Reload</button>
+</div>
+
+<div class="package-list">
+  @if (packageList.length === 0 && !loading) {
+    <p>No packages found</p>
+  } @else {
+    @for (pkg of packageList | filter: searchValue; track pkg.id) {
+      <app-package-card
+        [package]="pkg"
+        [highlightedDeps]="highlightedDeps"
+        (hover)="highlightDependencies(pkg.id)"
+        (leave)="clearHighlight()"
+      ></app-package-card>
+    }
+  }
+</div>

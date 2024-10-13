@@ -1,0 +1,6 @@
+@if (message) {
+  <div class="notification">
+    <span class="message">{{ message }}</span>
+    <span class="close-button" (click)="message = null">&times;</span>
+  </div>
+}
